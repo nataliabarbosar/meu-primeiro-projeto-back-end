@@ -44,7 +44,7 @@ async function criaMulher(request, response) {
 //PATCH
 async function corrigeMulher(request, response) {
     try {
-        const mulherEncontrada = await Mulher.findById(express.request.params.id)
+        const mulherEncontrada = await Mulher.findById(request.params.id)
 
          if (request.body.nome) {
         mulherEncontrada.nome = request.body.nome
